@@ -12,7 +12,7 @@
     "build": "npm run buildnode && npm run buildweb",
     "test": "mocha --reporter spec",
     "prepublish": "npm run build",
-    "dopublish": "git add . && git commit -m'bump version' && git push origin master && npm publish --access=public"
+    "dopublish": "git add . ; git commit -m'bump version' ; git push origin master ; npm publish --access=public"
   },
   "author": "",
   "license": "ISC",
