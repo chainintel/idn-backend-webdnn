@@ -1,7 +1,7 @@
 # About
 
-Backend Interface for IDN
+WebDNN Backend for IDN
 
 # Install
 
-    npm install @idn/backend
+    npm install @idn/backend-webdnn
