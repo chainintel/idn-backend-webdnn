@@ -2,8 +2,18 @@ import { Backend } from '@idn/backend';
 const WebDNN = require('../lib/webdnn/descriptor_runner/webdnn.ts');
 
 class WebDNNBackend extends Backend {
-  constructor(supported_types) {
-    super(supported_types);
+  constructor(types) {
+    types = types.filter(
+      (type) =>
+        ['webdnn/webgpu', 'webdnn/webgl', 'webdnn/webassembly', 'webdnn/fallback'].indexOf(type) >=
+        0
+    );
+    if (types.length == 0) {
+      throw new Error(
+        'please provide an array of types this backend support webdnn/webgpu,webdnn/webgl,webdnn/webassembly,webdnn/fallback'
+      );
+    }
+    super(types);
   }
   async _initFn(model) {
     let modelPath = model.path;
