@@ -13,5 +13,5 @@ describe('WebDNNBackend', () => {
     let result = await runner.infer([toBuffer(new Float32Array(784))]);
     console.log(result);
     // expect(result).to.equal('Boys');
-  });
+  }).timeout(60000);
 });
