@@ -1,6 +1,6 @@
 'use strict';
 var expect = require('chai').expect;
-const { WebDNNBackend } = require('../dist/index.js');
+const { WebDNNBackend } = require('../dist/node.js');
 const { fromBuffer, toBuffer } = require('@idn/util-buffer');
 
 describe('WebDNNBackend', () => {

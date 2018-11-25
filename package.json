@@ -1,8 +1,9 @@
 {
   "name": "@idn/backend-webdnn",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/node.js",
+  "browser": "dist/web.js",
   "types": "dist/src/web.d.ts",
   "scripts": {
     "buildnode": "webpack --config webpack.node.config.js",
